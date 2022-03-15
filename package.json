@@ -16,7 +16,7 @@
     "@cloudflare/workers-types": "^3.4.0",
     "@typescript-eslint/eslint-plugin": "^5.14.0",
     "@typescript-eslint/parser": "^5.14.0",
-    "esbuild": "^0.14.25",
+    "esbuild": "^0.14.27",
     "eslint": "^8.10.0",
     "miniflare": "^2.3.0",
     "prettier": "^2.5.1",
