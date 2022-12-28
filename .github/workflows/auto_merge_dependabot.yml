@@ -12,11 +12,37 @@ jobs:
     steps:
       - name: Dependabot metadata
         id: metadata
-        uses: dependabot/fetch-metadata@v1.1.1
+        uses: dependabot/fetch-metadata@v1
         with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-      - name: Enable auto-merge for Dependabot PRs
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Merge PR
         run: gh pr merge --auto --merge "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
+          GH_TOKEN: ${{ github.token }}
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
+          registry-url: https://registry.npmjs.org/
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Tag new version
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git fetch --unshallow
+          git checkout master
+          git pull --ff-only
+          TAG=$(npm version minor)
+      - name: Push new tag
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          tags: true
+      - name: Checkout new tag
+        run: git checkout "$TAG"
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
