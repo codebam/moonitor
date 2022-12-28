@@ -20,8 +20,9 @@ jobs:
         with:
           node-version: latest
           registry-url: https://registry.npmjs.org/
-      - name: Enable auto-merge for Dependabot PRs
-      - run: gh pr merge --auto --merge "$PR_URL"
+      - name: Merge PR
+        run: gh pr merge --auto --merge "$PR_URL"
+      - name: Push new tag
       - uses: actions/checkout@v3
       - run: git push origin $(npm version minor)
         env:
