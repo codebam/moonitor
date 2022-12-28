@@ -8,6 +8,11 @@ jobs:
       runs-on: ubuntu-latest
       timeout-minutes: 60
       steps:
+        - name: Release
+          uses: softprops/action-gh-release@v1
+          if: startsWith(github.ref, 'refs/tags/')
+          with:
+            token: ${{ secrets.GITHUB_TOKEN }}      
         - uses: actions/checkout@v3
         - name: Publish
           uses: cloudflare/wrangler-action@2.0.0
@@ -29,8 +34,3 @@ jobs:
             SECRET_TELEGRAM_API_TOKEN: ${{ secrets.SECRET_TELEGRAM_API_TOKEN }}
             SECRET_TELEGRAM_API_TOKEN2: ${{ secrets.SECRET_TELEGRAM_API_TOKEN2 }}
             SECRET_TELEGRAM_API_TOKEN3: ${{ secrets.SECRET_TELEGRAM_API_TOKEN3 }}
-        - name: Release
-          uses: softprops/action-gh-release@v1
-          if: startsWith(github.ref, 'refs/tags/')
-          with:
-            token: ${{ secrets.GH_TOKEN }}
