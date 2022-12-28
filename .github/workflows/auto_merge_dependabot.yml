@@ -16,11 +16,10 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Merge PR
+        run: gh pr merge --auto --merge "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
-          GH_TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
-          GITHUB_TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
-        run: gh pr merge --auto --merge "$PR_URL"
+          GH_TOKEN: ${{ github.token }}
       - name: Setup node
         uses: actions/setup-node@v3
         with:
