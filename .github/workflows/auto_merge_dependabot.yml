@@ -22,9 +22,10 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: Merge PR
         run: gh pr merge --auto --merge "$PR_URL"
-      - name: Push new tag
-      - uses: actions/checkout@v3
-      - run: git push origin $(npm version minor)
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Push new tag
+        run: git push origin $(npm version minor)
