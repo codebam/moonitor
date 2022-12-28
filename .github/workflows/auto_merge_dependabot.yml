@@ -20,6 +20,7 @@ jobs:
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GH_TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
       - name: Setup node
         uses: actions/setup-node@v3
         with:
