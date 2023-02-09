@@ -11,7 +11,7 @@ export default class TelegramWebhook extends Webhook {
     sha256(this.token).then((access_key) =>
       fetch_json(
         addSearchParams(new URL(`${this.api.href}/setWebhook`), {
-          url: `${this.url.href}/${access_key}`,
+          url: `${this.url.href}${access_key}`,
           max_connections: "100",
           allowed_updates: JSON.stringify(["message", "inline_query"]),
           drop_pending_updates: drop_pending_updates.toString(),
