@@ -14,7 +14,7 @@
 	"license": "Apache-2.0",
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20230724.0",
-		"@typescript-eslint/eslint-plugin": "^5.61.0",
+		"@typescript-eslint/eslint-plugin": "^6.2.0",
 		"@typescript-eslint/parser": "^6.2.0",
 		"esbuild": "^0.18.16",
 		"esbuild-plugin-glob": "^2.2.2",
