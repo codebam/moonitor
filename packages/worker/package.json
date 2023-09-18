@@ -15,7 +15,7 @@
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20230814.0",
 		"@typescript-eslint/eslint-plugin": "^6.4.0",
-		"@typescript-eslint/parser": "^6.4.0",
+		"@typescript-eslint/parser": "^6.7.0",
 		"esbuild": "^0.19.2",
 		"esbuild-plugin-glob": "^2.2.2",
 		"eslint": "^8.47.0",
