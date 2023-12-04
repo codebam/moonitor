@@ -15,7 +15,7 @@
 	"devDependencies": {
 		"@babel/preset-env": "^7.23.3",
 		"@cloudflare/workers-types": "^4.20231121.0",
-		"@typescript-eslint/eslint-plugin": "^6.13.0",
+		"@typescript-eslint/eslint-plugin": "^6.13.1",
 		"@typescript-eslint/parser": "^6.13.0",
 		"esbuild": "^0.19.8",
 		"esbuild-plugin-babel": "^0.2.3",
