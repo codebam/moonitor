@@ -16,7 +16,7 @@
 		"@babel/preset-env": "^7.24.4",
 		"@cloudflare/workers-types": "^4.20240405.0",
 		"@typescript-eslint/eslint-plugin": "^7.5.0",
-		"@typescript-eslint/parser": "^7.5.0",
+		"@typescript-eslint/parser": "^7.6.0",
 		"esbuild": "^0.20.2",
 		"esbuild-plugin-babel": "^0.2.3",
 		"esbuild-plugin-glob": "^2.2.3",
