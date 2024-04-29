@@ -14,7 +14,7 @@
 	"license": "Apache-2.0",
 	"devDependencies": {
 		"@babel/preset-env": "^7.24.4",
-		"@cloudflare/workers-types": "^4.20240405.0",
+		"@cloudflare/workers-types": "^4.20240423.0",
 		"@typescript-eslint/eslint-plugin": "^7.7.0",
 		"@typescript-eslint/parser": "^7.7.0",
 		"esbuild": "^0.20.2",
