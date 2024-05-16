@@ -1,3 +1,5 @@
+pr
+
 <h3 align="center">
 <img src="https://raw.githubusercontent.com/codebam/cf-workers-telegram-bot/master/assets/logo.png" width="100" />
 <br/>
