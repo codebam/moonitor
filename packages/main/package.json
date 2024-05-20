@@ -41,7 +41,7 @@
 		"lerna": "^8.1.2",
 		"prettier": "^3.2.5",
 		"typescript": "^5.4.5",
-		"typescript-eslint": "^7.8.0",
+		"typescript-eslint": "^7.9.0",
 		"vitest": "^1.6.0"
 	}
 }
