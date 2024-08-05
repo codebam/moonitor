@@ -18,7 +18,7 @@
 		"@cloudflare/vitest-pool-workers": "^0.4.7",
 		"@cloudflare/workers-types": "^4.20240718.0",
 		"@eslint/js": "^9.8.0",
-		"@typescript-eslint/eslint-plugin": "^7.14.1",
+		"@typescript-eslint/eslint-plugin": "^8.0.0",
 		"@typescript-eslint/parser": "^7.14.1",
 		"esbuild": "^0.23.0",
 		"esbuild-plugin-babel": "^0.2.3",
