@@ -42,7 +42,7 @@ These instructions are for if you want to deploy a copy of the bot along with
 the library. Such as if you need extra API requests that haven't been
 implemented yet.
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/codebam/cf-workers-telegram-bot)
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/sahelefarda/cf-workers-telegram-bot)
 
 - Click the deploy button
 - Navigate to your new **GitHub repository &gt; Settings &gt; Secrets** and add the following secrets:
